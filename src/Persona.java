@@ -1,16 +1,16 @@
-public class Persona {
+public abstract class Persona {
     private String nombre;
     private String apellidos;
-    private String edad;
-    private String id;
+    private String identificacion;
 
-    public Persona(String nombre, String apellidos, String edad, String id) {
+    // Constructor
+    public Persona(String nombre, String apellidos, String identificacion) {
         this.nombre = nombre;
         this.apellidos = apellidos;
-        this.edad = edad;
-        this.id = id;
+        this.identificacion = identificacion;
     }
 
+    // Getters y Setters
     public String getNombre() {
         return nombre;
     }
@@ -27,19 +27,14 @@ public class Persona {
         this.apellidos = apellidos;
     }
 
-    public String getEdad() {
-        return edad;
+    public String getIdentificacion() {
+        return identificacion;
     }
 
-    public void setEdad(String edad) {
-        this.edad = edad;
+    public void setIdentificacion(String identificacion) {
+        this.identificacion = identificacion;
     }
 
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
+    // Método abstract para obtener la Información del Estudiante / Docente
+    public abstract String obtenerInformacion();
 }
